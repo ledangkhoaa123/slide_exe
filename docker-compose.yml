@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: layerz-pitch-deck
     ports:
-      - "2424:80"
+      - "127.0.0.1:2424:80"
     environment:
       - NODE_ENV=production
     restart: unless-stopped
