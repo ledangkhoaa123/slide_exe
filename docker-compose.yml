@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  layerz-pitch-deck:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: layerz-pitch-deck
+    ports:
+      - "2424:80"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - layerz-network
+
+networks:
+  layerz-network:
+    driver: bridge
